@@ -1,0 +1,47 @@
+button{
+	padding: 15px 60px;
+	outline: none;
+	cursor: pointer;
+	background-color: pink;
+	color: #000000;
+	border: none;
+}
+
+button:hover{
+	background-color: green;
+		color: #ffff;
+}
+
+.modal{
+display: none;
+align-items: center;
+justify-content: center;
+position: fixed;
+top: 0;
+right: 0;
+background-color: rgba(8,8,8,0.5);
+width: 100%;
+height: 100vh;
+z-index: 999;
+}
+
+.modal_active{
+display: flex !important;
+}
+
+.modal-form{
+	width: 300px;
+	background-color: #fff;
+	text-align: center;
+	padding: 40px 40px;
+	position: relative;
+}
+
+.modal-form__close{
+	font-size: 3rem;
+	top: -50px;
+	right: -20px;
+	position: absolute;
+	cursor: pointer;
+	font-weight: bold;
+}
