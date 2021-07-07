@@ -69,5 +69,32 @@ if(value === '' && value === null && (typeof (value) === 'number')){
 	alert('Все гуд')
 	console.log(value)
 }
+}
+
+/*callback функции*/
+function first(){
+	// выполнится 1 раз с задержкой в 1000мс
+	setTimeout(function(){
+		console.log(1)
+	},1000)
 
 }
+
+function second(){
+	console.log(2)
+}
+
+first()
+second()
+
+// 2-ой пример
+
+function learnJs(lang,callback){
+	console.log('Я учу ' + lang)
+	callback()
+}
+
+// вторая функция выполниться строго после 1-ой и передаеться вторым параметром как callback()
+learnJs('Javascript', function(){
+	console.log('Как же это сложно, что то учить')
+})

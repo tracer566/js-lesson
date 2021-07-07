@@ -26,7 +26,7 @@ let mainList = {
 	shopGoods: [],
 	employers:{},
 	open:true,
-	discount: false
+	discount: true
 }
 
 
@@ -59,10 +59,38 @@ for(let i = 0;i < 5;i++){
 			}
 	}
 
-	workTime(67)
+	// workTime(67)
 
 
-alert(mainList['money'] / 30)
+function calcDayBudjet(){
+	console.log(mainList['money'] / 30)
+}
+
+// calcDayBudjet()
+
+price = 100
+function discount(){
+	
+	if(mainList.discount === true){
+		let resultPrice = price / 100 * 80
+		console.log('resultPrice',resultPrice)
+	}
+}
+
+// discount()
+
+function employers(){
+	for(let z = 0;z < 5;z++){
+		let employers = prompt(z + ' Как зовут вашего сотрудника?')
+		if((typeof (employers)) === 'string' && employers !== '' && employers !== null && employers.length < 17){
+		mainList.employers[z] = z + '.' + employers
+	} else {
+		z = z - 1
+	}
+
+	}
+}
+
+// employers()
+
 console.log(mainList)
-
-
